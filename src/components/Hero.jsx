@@ -1,44 +1,57 @@
 export default function Hero() {
   return (
-    <section
-      id="inicio"
-      className="relative overflow-hidden bg-forest-deep bg-grass-stripes"
-    >
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-forest-deep" />
-      <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-10 px-4 py-16 text-center md:flex-row md:py-24 md:text-left">
-        <div className="flex flex-1 flex-col items-center md:items-start">
-          <p className="mb-2 text-sm font-bold uppercase tracking-[0.2em] text-forest-accent">
-            Fútbol amateur
-          </p>
-          <h1 className="mb-4 max-w-xl text-4xl font-extrabold leading-tight text-white md:text-5xl">
+    <section id="inicio" className="relative overflow-hidden bg-forest-deep">
+      {/* Misma familia cromática que el PNG del escudo (verde + rayas suaves) */}
+      <div className="absolute inset-0 bg-forest-canvas/80 bg-grass-stripes opacity-[0.45]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-transparent to-forest-deep" />
+      <div className="absolute inset-0 bg-hero-vignette" />
+
+      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 md:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] md:gap-14 md:py-24 lg:py-28">
+        <div className="text-center md:text-left">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-forest-accent">Fútbol amateur</p>
+          <h1 className="mb-5 max-w-xl text-4xl font-extrabold leading-[1.12] tracking-tight text-white md:text-5xl">
             Pasión, equipo y cancha todos los fines de semana
           </h1>
-          <p className="mb-8 max-w-lg text-lg text-pitch-light/90">
-            Somos Pichangueros FC: un club donde sumarse es fácil. Entrená con nosotros, jugá los partidos y
-            formá parte de la familia verde.
+          <p className="mb-9 max-w-lg text-lg leading-relaxed text-pitch-light/88 md:mx-0">
+            Somos Pichangueros FC: un club donde sumarse es fácil. Entrená con nosotros, jugá los partidos y formá
+            parte de la familia verde.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
+          <div className="flex flex-wrap items-center justify-center gap-3 md:justify-start">
             <a
               href="#inscribirse"
-              className="inline-flex items-center justify-center rounded-xl bg-forest-accent px-8 py-3.5 text-base font-bold text-white shadow-lg shadow-forest-accent/30 transition hover:bg-[#3d8f56] hover:shadow-forest-accent/40"
+              className="inline-flex h-12 items-center justify-center rounded-xl bg-forest-accent px-8 text-sm font-bold text-white shadow-lg shadow-forest-accent/25 transition hover:bg-[#3d8f56]"
             >
               Inscribirme al próximo partido
             </a>
             <a
               href="#partidos"
-              className="inline-flex items-center justify-center rounded-xl border-2 border-white/30 px-6 py-3.5 font-semibold text-white transition hover:border-forest-accent hover:text-forest-accent"
+              className="inline-flex h-12 items-center justify-center rounded-xl border border-white/20 px-6 text-sm font-semibold text-white/95 transition hover:border-white/35 hover:bg-white/[0.05]"
             >
               Ver calendario
             </a>
           </div>
         </div>
-        <div className="flex flex-1 justify-center md:justify-end">
-          <div className="relative">
-            <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-forest-accent/20 to-transparent blur-2xl" />
+
+        {/* Escudo: sin “caja”; halo mínimo en verde para fundir borde del PNG con la sección */}
+        <div className="flex justify-center md:justify-end">
+          <div className="relative w-full max-w-[min(100%,20rem)] md:max-w-[22rem] lg:max-w-[24rem]">
+            <div
+              className="pointer-events-none absolute left-1/2 top-[52%] h-[118%] w-[118%] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-90"
+              style={{
+                background:
+                  'radial-gradient(circle, rgba(26, 60, 45, 0.55) 0%, rgba(10, 26, 20, 0.2) 52%, transparent 72%)',
+              }}
+              aria-hidden
+            />
             <img
               src="/logo.png"
-              alt=""
-              className="relative h-56 w-56 object-contain drop-shadow-2xl md:h-72 md:w-72"
+              alt="Escudo oficial Pichangueros FC"
+              className="relative z-[1] h-auto w-full object-contain"
+              style={{
+                filter: 'drop-shadow(0 16px 40px rgba(0, 0, 0, 0.45))',
+              }}
+              width={400}
+              height={400}
             />
           </div>
         </div>

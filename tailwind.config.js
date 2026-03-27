@@ -5,7 +5,9 @@ export default {
     extend: {
       colors: {
         forest: {
+          /* Alineado al verde oscuro del escudo con fondo degradado */
           deep: '#0a1a14',
+          canvas: '#0d2018',
           DEFAULT: '#1b4332',
           accent: '#4da167',
         },
@@ -19,6 +21,8 @@ export default {
       backgroundImage: {
         'grass-stripes':
           'repeating-linear-gradient(90deg, transparent, transparent 3px, rgba(0,0,0,0.12) 3px, rgba(0,0,0,0.12) 6px)',
+        'hero-vignette':
+          'radial-gradient(ellipse 75% 60% at 50% 45%, rgba(13, 32, 24, 0.5) 0%, transparent 65%)',
       },
     },
   },

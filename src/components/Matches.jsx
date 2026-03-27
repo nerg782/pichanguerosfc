@@ -1,7 +1,7 @@
 const upcoming = [
-  { day: 'Sáb 29', time: '18:00', rival: 'Amistoso vs. Los Galácticos', place: 'Cancha municipal' },
-  { day: 'Dom 6', time: '10:30', rival: 'Liga local — Fecha 4', place: 'Polideportivo Norte' },
-  { day: 'Sáb 12', time: '17:00', rival: 'Entrenamiento + partido', place: 'Cancha municipal' },
+  { day: 'Jue 26-03', time: '20:00', rival: 'Pichangueros A vs. Pichangueros B', place: 'Los Cancheros, La Reina' },
+  { day: 'Sab 28-03', time: '19:00', rival: 'Pichangueros A vs. Pichangueros B', place: 'A Definir' },
+  { day: 'Jue 03-04', time: '20:00', rival: 'Pichangueros A vs. Pichangueros B', place: 'A Definir' },
 ]
 
 export default function Matches() {
